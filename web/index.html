@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="global.css">
+	<link rel="stylesheet" href="color.css">
+	<link rel="stylesheet" href="grid.css">
+	<script src="index.js"></script>
+	<title>chat.io</title>
+</head>
+<body class="b1">
+	<div class="makeaccount">
+		<div class="brd b2">
+			<p class="title pdg brd-top b3">Создать аккаунт</p>
+			<div class="h75 center">
+				<div class="h40 w100">
+					<form class="pdg" id="create_account">
+						<input class="w100" type="text" name="accountnick" autocomplete="off" placeholder="Ник"><br>
+						<label>Цвет ника: </label><input type="color" name="nickcolor"><br>
+						<input class="mrg-top w100 b" type="submit" value="СОЗДАТЬ">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="menu" hidden>
+		<div class="brd b2">
+			<p class="title pdg brd-top b3">Создать комнату</p>
+			<div class="center h40 w100">
+				<form class="pdg" id="create_room">
+					<label>Приватная комната: </label><input type="checkbox" name="is_private" checked><br>
+					<label>Количество участников: </label><input type="number" name="member_count" min="2" max="20" value="2"><br>
+					<input class="mrg-top w100 b" type="submit" value="СОЗДАТЬ">
+				</form>
+			</div>
+			<p class="title pdg b3">Присоединиться к комнате</p>
+			<div class="hcenter center h40 w100">
+				<div>
+					<form class="mrg-top pdg brd-bottom" id="join_room">
+						<div>
+							<input class="w100" type="text" name="invite_code" autocomplete="off" placeholder="Код приглашения"><br>
+							<input class="mrg-top w100 b" type="submit" value="ОК">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="chat" hidden>
+		<div class="box0">
+			<div class="">asdsdfbdsfbdsjkfdsbfdsjkfsdfdsf<br>asdassadad\<br>asdassadad\<br>asdassadad\<br>asdassadad\<br>asdassadad\</div>
+			<div class="">asd</div>
+		</div>
+		<div class="">asd</div>
+		<div class="">asd</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+html, body {
+	color: #FFF;
+	background-color: #112;
+	overflow: hidden;
+
+	margin: 0px;
+	height: 100%;
+}
+
+p { margin: 0; }
+div[hidden] { display: none; }
+
+input {
+	box-sizing: content-box;
+	padding: 1px 2px;
+	border-radius: 5px;
+	border-width: 0px;
+	background-color: #334;
+	color: #FFF;
+}
+
+input[type = "checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #F44;
+	margin: 0;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+	border-radius: 5px;
+	outline: none;
+}
+
+input[type = "color"] { padding: 0; height: 15px; width: 15px; }
+
+input[type = "checkbox"]:checked { background-color: #4F4; }
+input[type = "button"]:hover, input[type = "submit"]:hover  { filter: brightness(125%); }
+input[type = "button"]:active, input[type = "submit"]:active, input[type = "text"]:focus { filter: brightness(75%); }
+
+
+
+.overflow { overflow-y: visible; }
+
+.mrg5       { margin : 5px; }
+.mrg        { margin : 3px 3px 0px 3px; }
+.mrg-bottom { margin : 0px 3px 0px 0px; }
+.mrg-top    { margin : 3px 0px 0px 0px; }
+
+.pdg        { padding: 3px 3px 0px 3px; }
+
+.brd        { border-radius: 10px; }
+.brd-left   { border-radius: 10px  0px  0px 10px; }
+.brd-right  { border-radius:  0px 10px 10px  0px; }
+.brd-bottom { border-radius:  0px  0px 10px 10px; }
+.brd-top    { border-radius: 10px 10px  0px  0px; }
+
+.h100 { height: 100%; }
+.h75  { height: 75% ; }
+.h50  { height: 50% ; }
+.h40  { height: 40% ; }
+.h25  { height: 25% ; }
+
+.w100 { width : 100%; }
+.w75  { width : 75% ; }
+.w50  { width : 50% ; }
+.w25  { width : 25% ; }
+
+
+
+
+
+.hcenter { text-align: center; }
+.vcenter { display: table-cell; vertical-align: middle; }
+
+.title {
+	margin: 0px;
+	font-size: larger;
+	text-align: center;
+}
