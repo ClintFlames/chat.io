@@ -1,0 +1,16 @@
+html, body, #fake_body, #page_main {
+	height: 100%;
+	max-height: -webkit-fill-available;
+}
+
+:root {
+	--fch: calc(100% - (var(--ws2) * 2));
+}
+
+#div_chat {
+	grid-template-rows: calc(var(--fws) + (var(--ws2) * 2)) auto calc(var(--fws) + (var(--ws2) * 2));
+}
+
+#info {
+	grid-template-rows: calc(100% - (var(--fws) + var(--ws2) * 2)) calc(var(--fws) + var(--ws2));
+}

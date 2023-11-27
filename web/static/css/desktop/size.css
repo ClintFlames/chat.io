@@ -1,0 +1,15 @@
+html, body, #fake_body, #page_main {
+	height: 100vh;
+}
+
+:root {
+	--fch: calc(100vh - (var(--ws2) * 2));
+}
+
+#div_chat {
+	grid-template-rows: calc(var(--fws) + (var(--ws2) * 2)) calc(var(--fch) - (var(--fws) * 2) - (var(--ws2) * 4)) calc(var(--fws) + (var(--ws2) * 2));
+}
+
+#info {
+	grid-template-rows: calc(100vh - (var(--fws) + var(--ws2) * 4)) calc(var(--fws) + var(--ws2));
+}

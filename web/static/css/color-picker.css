@@ -1,0 +1,31 @@
+.color-picker {
+	display: grid;
+
+	grid-template-columns: 4.5rem 11rem;
+
+	grid-template-areas:
+		"hex        hexprev"
+		"text_red   ired   "
+		"text_green igreen "
+		"text_blue  iblue  "
+	;
+}
+
+input[name = "hex"       ] { grid-area: hex       ; }
+input[name = "text_red"  ] { grid-area: text_red  ; }
+input[name = "red"       ] { grid-area: ired      ; }
+input[name = "text_green"] { grid-area: text_green; }
+input[name = "green"     ] { grid-area: igreen    ; }
+input[name = "text_blue" ] { grid-area: text_blue ; }
+input[name = "blue"      ] { grid-area: iblue     ; }
+
+.color-picker > input[type = "range"], .color-picker > input[name = "hexprev"] { margin-left: var(--ws2); }
+
+input[name = "hexprev"] {
+	grid-area: hexprev;
+
+	padding: 0;
+
+	height: var(--fws);
+	width: auto;
+}

@@ -3,59 +3,85 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="global.css">
-	<link rel="stylesheet" href="color.css">
-	<link rel="stylesheet" href="grid.css">
-	<script src="index.js"></script>
-	<title>chat.io</title>
+	<title>Chat.io</title>
+
+	<link rel="stylesheet" href="static/css/global.css">
+	<link rel="stylesheet" href="static/css/color-picker.css">
+	<link rel="stylesheet" href="static/css/register.css">
+	<link rel="stylesheet" href="static/css/main.css">
+
+	<script>const debug = true;</script>
+	<script type="module" src="static/js/loader.js"></script>
+	<script type="module" src="static/js/color-picker.js"></script>
+	<script type="module" src="static/js/register.js"></script>
+	<script type="module" src="static/js/index.js"></script>
 </head>
-<body class="b1">
-	<div class="makeaccount">
-		<div class="brd b2">
-			<p class="title pdg brd-top b3">Создать аккаунт</p>
-			<div class="h75 center">
-				<div class="h40 w100">
-					<form class="pdg" id="create_account">
-						<input class="w100" type="text" name="accountnick" autocomplete="off" placeholder="Ник"><br>
-						<label>Цвет ника: </label><input type="color" name="nickcolor"><br>
-						<input class="mrg-top w100 b" type="submit" value="СОЗДАТЬ">
-					</form>
+<body>
+	<div id="fake_body">
+		<div id="page_register" class="l2 br">
+			<p class="br-top brd-bottom" align="center">РЕГИСТРАЦИЯ</p>
+			<form id="form_register">
+				<input type="text" name="nick" maxlength="24" value="Anon" placeholder="Ник" autocomplete="off" spellcheck="false">
+	
+				<div class="color-picker">
+					<input type="text"   name="hex"  maxlength="7"           placeholder="Hex" autocomplete="off" spellcheck="false">
+					<input type="text"   name="hexprev" readonly>
+					<input type="number" name="text_red"   min="0" max="255" placeholder="R"   autocomplete="off">
+					<input type="range"  name="red"        min="0" max="255">
+					<input type="number" name="text_green" min="0" max="255" placeholder="G"   autocomplete="off">
+					<input type="range"  name="green"      min="0" max="255">
+					<input type="number" name="text_blue"  min="0" max="255" placeholder="B"   autocomplete="off">
+					<input type="range"  name="blue"       min="0" max="255">
 				</div>
+	
+				<input type="button" value="ОК">
+			</form>
+		</div>
+		<footer>
+			<a href="pp"  target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+			<a href="tos" target="_blank" rel="noopener noreferrer">Условия предоставления услуг</a>
+		</footer>
+	</div>
+	<div id="page_main" hidden>
+		<div class="l2 br" id="info">
+			<div class="brd-bottom" id="user_list">
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+			</div>
+			<div class="prof" id="profile">
+				<span></span>
+				<input type="button" value="Удалить">
 			</div>
 		</div>
-	</div>
-
-	<div class="menu" hidden>
-		<div class="brd b2">
-			<p class="title pdg brd-top b3">Создать комнату</p>
-			<div class="center h40 w100">
-				<form class="pdg" id="create_room">
-					<label>Приватная комната: </label><input type="checkbox" name="is_private" checked><br>
-					<label>Количество участников: </label><input type="number" name="member_count" min="2" max="20" value="2"><br>
-					<input class="mrg-top w100 b" type="submit" value="СОЗДАТЬ">
+		<div class="l2 br" id="div_chat">
+			<div id="chatheader">asd</div>
+			<div class="brd-bottom brd-top" id="chatbox">
+				<div class="chatmessage"><div>Asddds</div><span>mess</span></div>
+				<div class="chatmessage"><div>Asddds</div><span>mess1</span></div>
+				<div class="chatmessage"><div>Asddds</div><span>mess2</span></div>
+				<div class="chatmessage"><div>Asddds</div><span>mess3</span></div>
+				<div class="chatmessage"><div>Asddds</div><span>mess4</span></div>
+			</div>
+			<div id="chatfooter">
+				<form id="form_chat">
+					<input type="text" name="messagebox" maxlength="24" value="Hello, world!" placeholder="Сообщение" autocomplete="off" spellcheck="false">
+					<input type="button" value="ОК">
 				</form>
 			</div>
-			<p class="title pdg b3">Присоединиться к комнате</p>
-			<div class="hcenter center h40 w100">
-				<div>
-					<form class="mrg-top pdg brd-bottom" id="join_room">
-						<div>
-							<input class="w100" type="text" name="invite_code" autocomplete="off" placeholder="Код приглашения"><br>
-							<input class="mrg-top w100 b" type="submit" value="ОК">
-						</div>
-					</form>
-				</div>
-			</div>
 		</div>
-	</div>
-
-	<div class="chat" hidden>
-		<div class="box0">
-			<div class="">asdsdfbdsfbdsjkfdsbfdsjkfsdfdsf<br>asdassadad\<br>asdassadad\<br>asdassadad\<br>asdassadad\<br>asdassadad\</div>
-			<div class="">asd</div>
-		</div>
-		<div class="">asd</div>
-		<div class="">asd</div>
 	</div>
 </body>
 </html>

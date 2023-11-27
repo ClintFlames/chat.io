@@ -1,0 +1,25 @@
+#fake_body {
+	display: grid;
+
+	place-items: center;
+}
+
+#form_register {
+	display: grid;
+
+	padding: var(--ws2);
+	padding-top: 0;
+
+	grid-template-areas: "nick" "colorpicker" "ok";
+}
+
+input[name = "nick"] { grid-area: nick; }
+.color-picker { grid-area: colorpicker; }
+#form_register > input[type = "button"] {
+	grid-area: ok;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: var(--b);
+}
