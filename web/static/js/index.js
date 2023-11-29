@@ -1,4 +1,4 @@
-import { loadDevicePageInto, loadDeviceScript, loadDeviceStyle, runOnLoad } from "./loader.js";
+import { device, loadDevicePageInto, loadDeviceScript, loadDeviceStyle, runOnLoad } from "./loader.js";
 
 const page = {
 	register: document.getElementById("fake_body"),
@@ -22,12 +22,32 @@ const openchat = (token, nick, color) => {
 	console.log(nick);
 	console.log(color);
 	const span_nick = document.getElementById("profile").getElementsByTagName("span")[0];
+	const div_info = document.getElementById("info");
+	const div_chat = document.getElementById("div_chat");
 
 	span_nick.innerHTML = nick;
 	span_nick.style = "color: #" + color.toString(16);
 
 	page.hideAll();
 	page.main.hidden = false;
+
+
+	div_info.style.display = "grid";
+
+	if (device == "phone") {
+		page.main.style.display = "block";
+		div_info.style.display = "none";
+	}
+
+	document.getElementById("open_ul").addEventListener("click", () => {
+		if (div_info.style.display == "grid") {
+			page.main.style.display = "block";
+			div_info.style.display = "none";
+		} else {
+			page.main.style.display = "grid";
+			div_info.style.display = "grid";
+		}
+	});
 }
 // openchat(null, "Anon", 0x9b2d30);
 

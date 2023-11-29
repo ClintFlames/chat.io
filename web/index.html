@@ -46,9 +46,9 @@
 		<div class="l2 br" id="info">
 			<div class="brd-bottom" id="user_list">
 				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
-				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
-				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
-				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof noadm"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof noadm"><span>Anon</span><input type="button" value="Бан"></div>
+				<div class="prof noadm"><span>Anon</span><input type="button" value="Бан"></div>
 				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
 				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
 				<div class="prof"><span>Anon</span><input type="button" value="Бан"></div>
@@ -67,7 +67,11 @@
 			</div>
 		</div>
 		<div class="l2 br" id="div_chat">
-			<div id="chatheader">asd</div>
+			<div id="chatheader">
+				<input type="button" id="open_ul" value="  ">
+				<span>Room name asdsadasdasdsadsada</span>
+				<input type="button" id="room_exit" value="Выйти">
+			</div>
 			<div class="brd-bottom brd-top" id="chatbox">
 				<div class="chatmessage"><div>Asddds</div><span>mess</span></div>
 				<div class="chatmessage"><div>Asddds</div><span>mess1</span></div>
@@ -77,8 +81,8 @@
 			</div>
 			<div id="chatfooter">
 				<form id="form_chat">
-					<input type="text" name="messagebox" maxlength="24" value="Hello, world!" placeholder="Сообщение" autocomplete="off" spellcheck="false">
-					<input type="button" value="ОК">
+					<input type="text" name="messagebox" maxlength="256" value="Hello, world!" placeholder="Сообщение" autocomplete="off" spellcheck="false">
+					<input type="button" value="  ">
 				</form>
 			</div>
 		</div>
